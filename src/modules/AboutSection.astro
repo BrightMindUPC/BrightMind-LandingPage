@@ -1,0 +1,56 @@
+---
+const items = [
+  {
+    title: 'Personalized Recommendations',
+    description:
+      'Suggestions tailored to your level, performance, and areas of interest for effective learning.',
+  },
+  {
+    title: 'Self-Assessments',
+    description:
+      'Quizzes and activities to measure your progress and improve in specific areas.',
+  },
+  {
+    title: 'Study Plan',
+    description:
+      'Adjust your study plan based on activity results to optimize your academic performance.',
+  },
+  {
+    title: 'Secure Authentication',
+    description:
+      'Login, registration, and password recovery to protect your account.',
+  },
+  {
+    title: 'Notifications',
+    description:
+      'Receive study reminders and suggestions to improve in key areas.',
+  },
+]
+---
+
+<section class="py-16 mt-8">
+  <div class="container max-w-7xl mx-auto">
+    <h3 class="text-3xl text-primary font-bold">About Brightmind</h3>
+    <p class="text-lg mt-2">
+      Brightmind is a platform that helps students to learn and master the
+      sciences with the help of AI. Discover the tools designed to help you
+      achieve your educational goals.
+    </p>
+
+    <div class="flex flex-wrap gap-x-6 gap-y-16 justify-center mt-12">
+      {
+        items.map((item, index) => (
+          <div class="basis-[calc(33.3333%_-_1rem)] w-full flex gap-x-3 shadow p-4 rounded-md">
+            <div class="w-8 h-8 mt-1 shrink-0 bg-primary rounded-full flex items-center justify-center text-white font-semibold">
+              {index + 1}
+            </div>
+            <div>
+              <h4 class="text-lg font-semibold">{item.title}</h4>
+              <p class="mt-1 text-[15px] leading-normal">{item.description}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

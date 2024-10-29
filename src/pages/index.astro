@@ -1,6 +1,7 @@
 ---
 import Header from '../components/Header.astro'
 import Layout from '../layouts/Layout.astro'
+import AboutSection from '../modules/AboutSection.astro'
 import HeroSection from '../modules/HeroSection.astro'
 ---
 
@@ -8,5 +9,11 @@ import HeroSection from '../modules/HeroSection.astro'
   <Header />
   <main class="pt-16">
     <HeroSection />
+    <AboutSection />
+    <section class="py-16">
+      <div class="container max-w-7xl mx-auto">
+        <h1>Next section</h1>
+      </div>
+    </section>
   </main>
 </Layout>
