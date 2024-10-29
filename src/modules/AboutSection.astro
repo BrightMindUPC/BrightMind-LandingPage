@@ -40,15 +40,15 @@ const items = [
     <div class="flex flex-wrap gap-x-6 gap-y-16 justify-center mt-12">
       {
         items.map((item, index) => (
-          <div class="basis-[calc(33.3333%_-_1rem)] w-full flex gap-x-3 shadow p-4 rounded-md">
+          <article class="basis-[calc(33.3333%_-_1rem)] w-full flex gap-x-3 shadow px-4 py-6 rounded-md">
             <div class="w-8 h-8 mt-1 shrink-0 bg-primary rounded-full flex items-center justify-center text-white font-semibold">
               {index + 1}
             </div>
             <div>
               <h4 class="text-lg font-[650] text-primary">{item.title}</h4>
-              <p class="mt-1 text-[15px] leading-normal">{item.description}</p>
+              <p class="text-[15px] leading-normal">{item.description}</p>
             </div>
-          </div>
+          </article>
         ))
       }
     </div>

@@ -3,6 +3,7 @@ import Header from '../components/Header.astro'
 import Layout from '../layouts/Layout.astro'
 import AboutSection from '../modules/AboutSection.astro'
 import HeroSection from '../modules/HeroSection.astro'
+import HowWorksSection from '../modules/HowWorksSection.astro'
 ---
 
 <Layout title="Welcome to Astro.">
@@ -10,10 +11,6 @@ import HeroSection from '../modules/HeroSection.astro'
   <main class="pt-16">
     <HeroSection />
     <AboutSection />
-    <section class="py-16">
-      <div class="container max-w-7xl mx-auto">
-        <h1>Next section</h1>
-      </div>
-    </section>
+    <HowWorksSection />
   </main>
 </Layout>

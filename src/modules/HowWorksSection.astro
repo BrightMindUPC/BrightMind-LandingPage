@@ -1,0 +1,62 @@
+---
+const steps = [
+  {
+    title: 'Create an account',
+    description:
+      'Sign up for an account and start learning with the help of AI.',
+  },
+  {
+    title: 'Choose a plan',
+    description:
+      'Select a subscription plan that fits your learning style and budget to unlock all features.',
+  },
+  {
+    title: 'Select your courses of interest',
+    description:
+      'Browse through our extensive course catalog and pick the subjects that interest you the most to begin your learning journey.',
+  },
+  {
+    title: 'Start learning at your own pace',
+    description:
+      'Learn at your own pace with personalized recommendations and progress tracking to ensure you stay on track and achieve your goals.',
+  },
+  {
+    title: 'Interact with our AI-powered bot',
+    description:
+      'Engage in interactive sessions with our AI bot to clarify doubts, get instant feedback, and enhance your learning experience.',
+  },
+]
+---
+
+<section class="py-16 mt-8">
+  <div class="container max-w-7xl mx-auto">
+    <h3 class="text-3xl text-primary font-bold">How it works</h3>
+    <p class="text-lg mt-2">
+      Brightmind is a platform that helps students to learn and master the
+      sciences with the help of AI. Discover the tools designed to help you
+      achieve your educational goals.
+    </p>
+
+    <div class="max-w-2xl mx-auto mt-12">
+      <ul>
+        {
+          steps.map((step, index) => (
+            <li>
+              <article class="flex">
+                <div class="shrink-0 w-20 border-r border-tertiary text-center flex items-center justify-center text-tertiary font-semibold text-xl">
+                  {index + 1}
+                </div>
+                <div class="pl-8 py-4">
+                  <h4 class="text-lg font-semibold text-primary">
+                    {step.title}
+                  </h4>
+                  <p>{step.description}</p>
+                </div>
+              </article>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</section>
