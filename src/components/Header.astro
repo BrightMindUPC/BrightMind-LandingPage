@@ -1,0 +1,36 @@
+---
+import Button from './Button.astro'
+
+const navLinks = [
+  { name: 'About', href: '#about' },
+  { name: 'How it Works', href: '#how-it-works' },
+  { name: 'Testimonials', href: '#testimonials' },
+  { name: 'Pricing', href: '#pricing' },
+  { name: 'Contact', href: '#contact' },
+]
+---
+
+<header
+  class="w-full h-16 flex items-center bg-secondary text-white px-4 fixed"
+>
+  <nav class="flex justify-between w-full items-center">
+    <div>
+      <h1 class="font-bold text-lg">BrightMind</h1>
+    </div>
+    <div class="flex items-center">
+      <ul class="flex gap-4">
+        {
+          navLinks.map((link) => (
+            <li class="text-sm font-semibold">
+              <a href={link.href}>{link.name}</a>
+            </li>
+          ))
+        }
+      </ul>
+      <div class="text-sm font-semibold flex gap-4 ml-8">
+        <Button type="secondary">Sign In</Button>
+        <Button type="secondary" outline>Sign Up</Button>
+      </div>
+    </div>
+  </nav>
+</header>

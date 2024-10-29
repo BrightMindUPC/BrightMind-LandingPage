@@ -6,6 +6,13 @@ export default {
       fontFamily: {
         'open-sans': ['Open Sans', 'sans-serif'],
       },
+      colors: {
+        primary: '#051E38',
+        secondary: '#0B242F',
+        tertiary: '#547780',
+        accent: '#A1BEC0',
+        neutral: '#F1F4F5',
+      },
     },
   },
   plugins: [],

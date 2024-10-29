@@ -1,0 +1,40 @@
+---
+interface Props {
+  type?: 'primary' | 'secondary'
+  href?: string
+  outline?: boolean
+}
+
+const { type = 'primary', href, outline = false } = Astro.props
+const isLink = !!href
+---
+
+{
+  isLink ? (
+    <a href={href} class:list={['flex button', type, { outline }]}>
+      <slot />
+    </a>
+  ) : (
+    <button class:list={['button', type, { outline }]}>
+      <slot />
+    </button>
+  )
+}
+
+<style>
+  .button {
+    @apply px-5 py-3 rounded-md;
+  }
+  .primary {
+    @apply text-white bg-primary;
+  }
+  .secondary {
+    @apply text-primary bg-neutral;
+  }
+  .primary.outline {
+    @apply border border-primary bg-transparent outline-0;
+  }
+  .secondary.outline {
+    @apply border border-neutral bg-transparent text-white outline-0;
+  }
+</style>
