@@ -1,0 +1,37 @@
+---
+import { Image } from 'astro:assets'
+import heroBgImage from '../images/bg-hero.jpg'
+import Button from '../components/Button.astro'
+---
+
+<section class="hero-bg min-h-[60dvh] relative flex flex-col">
+  <Image
+    src={heroBgImage}
+    alt="Hero background"
+    class="w-full h-full object-cover absolute pointer-events-none"
+  />
+  <div
+    class="absolute w-full h-full bg-gradient-to-r from-[rgba(10,10,10,0.75)] to-[rgba(10,10,10,0.55)] pointer-events-none"
+  >
+  </div>
+  <div
+    class="relative container mx-auto text-white py-16 flex-grow flex flex-col justify-center"
+  >
+    <h1 class="text-5xl font-bold leading-snug">
+      Master the Sciences <br /> with AI
+    </h1>
+    <p class="text-lg mt-2">
+      Study at your own pace and solve problems step by step <br /> by AI assistance
+      and get instant feedback.
+    </p>
+
+    <div class="mt-12">
+      <Button type="secondary">Discover more</Button>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero-bg {
+  }
+</style>
