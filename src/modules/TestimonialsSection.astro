@@ -1,0 +1,67 @@
+---
+import { Swiper, SwiperSlide } from 'swiper/react'
+import TestimonialCard from '../components/Testimonials/TestimonialCard'
+import TestimonialCarousel from '../components/Testimonials/TestimonialCarousel'
+import type { Testimonial } from '../model/testimonial'
+import { Navigation, Pagination } from 'swiper/modules'
+
+const testimonials: Testimonial[] = [
+  {
+    id: 1,
+    profileImg: 'https://randomuser.me/api/portraits/men/32.jpg',
+    fullName: 'John Doe',
+    comment:
+      'Brightmind is a platform that helps students to learn and master the sciences with the help of AI. Discover the tools designed to help you achieve your educational goals.',
+  },
+  {
+    id: 2,
+    profileImg: 'https://randomuser.me/api/portraits/men/32.jpg',
+    fullName: 'John Doe',
+    comment:
+      'Brightmind is a platform that helps students to learn and master the sciences with the help of AI. Discover the tools designed to help you achieve your educational goals.',
+  },
+  {
+    id: 3,
+    profileImg: 'https://randomuser.me/api/portraits/men/32.jpg',
+    fullName: 'John Doe',
+    comment:
+      'Brightmind is a platform that helps students to learn and master the sciences with the help of AI. Discover the tools designed to help you achieve your educational goals.',
+  },
+  {
+    id: 4,
+    profileImg: 'https://randomuser.me/api/portraits/men/32.jpg',
+    fullName: 'John Doe',
+    comment:
+      'Brightmind is a platform that helps students to learn and master the sciences with the help of AI. Discover the tools designed to help you achieve your educational goals.',
+  },
+  {
+    id: 5,
+    profileImg: 'https://randomuser.me/api/portraits/men/32.jpg',
+    fullName: 'John Doe',
+    comment:
+      'Brightmind is a platform that helps students to learn and master the sciences with the help of AI. Discover the tools designed to help you achieve your educational goals.',
+  },
+  {
+    id: 6,
+    profileImg: 'https://randomuser.me/api/portraits/men/32.jpg',
+    fullName: 'John Doe',
+    comment:
+      'Brightmind is a platform that helps students to learn and master the sciences with the help of AI. Discover the tools designed to help you achieve your educational goals.',
+  },
+]
+---
+
+<section class="py-16 mt-8">
+  <div class="container max-w-7xl mx-auto">
+    <h3 class="text-3xl text-primary font-bold">Testimonials</h3>
+    <p class="text-lg mt-2">
+      Brightmind is a platform that helps students to learn and master the
+      sciences with the help of AI. Discover the tools designed to help you
+      achieve your educational goals.
+    </p>
+
+    <div class="mx-auto mt-12">
+      <TestimonialCarousel client:idle testimonials={testimonials} />
+    </div>
+  </div>
+</section>
