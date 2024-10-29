@@ -3,7 +3,7 @@ import type { Testimonial } from '../../model/testimonial'
 
 const TestimonialCard: FC<TestimonialCardProps> = ({ testimonial }) => {
   return (
-    <article className="border p-6 rounded-md">
+    <article className="border p-6 rounded-md h-full">
       <header>
         <img
           src={testimonial.profileImg}

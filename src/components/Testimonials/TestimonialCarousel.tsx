@@ -18,10 +18,10 @@ const TestimonialCarousel: FC<TestimonialCarouselProps> = ({
       slidesPerView={3}
       navigation
       pagination={{ clickable: true, dynamicBullets: true }}
-      wrapperClass="pb-10"
+      wrapperClass="pb-10 h-auto items-stretch"
     >
       {testimonials.map((testimonial) => (
-        <SwiperSlide key={testimonial.id} className="px-1">
+        <SwiperSlide key={testimonial.id} className="px-1 !h-auto">
           <TestimonialCard testimonial={testimonial} />
         </SwiperSlide>
       ))}

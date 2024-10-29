@@ -1,0 +1,24 @@
+---
+import type { FooterLink } from './footerLink'
+
+interface Props {
+  title: string
+  links: FooterLink[]
+  class?: string
+}
+
+const { title, links, class: className } = Astro.props
+---
+
+<div class={className}>
+  <h5 class="text-lg font-semibold">{title}</h5>
+  <ul class="flex flex-col gap-2 mt-2">
+    {
+      links.map((link) => (
+        <li class="text-sm">
+          <a href={link.url}>{link.name}</a>
+        </li>
+      ))
+    }
+  </ul>
+</div>
